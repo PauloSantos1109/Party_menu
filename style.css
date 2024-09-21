@@ -1,175 +1,174 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fce4ec;
+  font-family: 'Comic Sans MS', sans-serif;
+  color: #5e35b1;
+  margin: 0;
+  padding: 0;
+  background-image: url('bg-magic-house.jpg'); /* Adicione uma imagem de fundo suave */
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #ab47bc;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.menu-section {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 243, 224, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 5px solid #ffccbc;
+  position: relative;
+  animation: slideIn 1s ease-in-out;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #f06292;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 1.2em;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.food-icon {
+  width: 30px;
+  margin-right: 10px;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+li:hover .food-icon {
+  transform: scale(1.2); /* Efeito de zoom no ícone ao passar o mouse */
+}
+
+.character {
+  position: absolute;
+  width: 80px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.character:hover {
+  opacity: 1; /* Efeito de destaque ao passar o mouse */
+}
+
+.character-left {
+  top: -20px;
+  left: -30px;
+}
+
+.character-right {
+  top: -20px;
+  right: -30px;
+}
+
+footer {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1em;
+  color: #5e35b1;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  body {
-    background-color: #fce4ec;
-    font-family: 'Comic Sans MS', sans-serif;
-    color: #5e35b1;
-    margin: 0;
-    padding: 0;
-    background-image: url('bg-magic-house.jpg'); /* Adicione uma imagem de fundo suave */
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+  to {
+    opacity: 1;
   }
-  
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
   h1 {
-    text-align: center;
-    font-size: 2.5em;
-    color: #ab47bc;
-    margin-top: 20px;
-    animation: fadeIn 1s ease-in-out;
+    font-size: 2em;
   }
   
   .menu-section {
-    width: 90%;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(255, 243, 224, 0.9);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 5px solid #ffccbc;
-    position: relative;
-    animation: slideIn 1s ease-in-out;
+    padding: 15px;
   }
-  
-  h2 {
-    font-size: 1.8em;
-    color: #f06292;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    font-size: 1.2em;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-  }
-  
+
   .food-icon {
-    width: 30px;
-    margin-right: 10px;
-    transform: scale(1);
-    transition: transform 0.3s ease;
+    width: 25px;
   }
-  
-  li:hover .food-icon {
-    transform: scale(1.2); /* Efeito de zoom no ícone ao passar o mouse */
+
+  li {
+    font-size: 1.1em;
   }
-  
+
   .character {
-    position: absolute;
-    width: 80px;
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
+    width: 60px;
   }
-  
-  .character:hover {
-    opacity: 1; /* Efeito de destaque ao passar o mouse */
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
   }
-  
-  .character-left {
-    top: -20px;
-    left: -30px;
-  }
-  
-  .character-right {
-    top: -20px;
-    right: -30px;
-  }
-  
-  footer {
-    text-align: center;
-    margin: 20px 0;
+
+  li {
     font-size: 1em;
-    color: #5e35b1;
-    animation: fadeInUp 1.5s ease-in-out;
   }
-  
-  /* Animações */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+
+  .character {
+    width: 50px;
   }
-  
-  @keyframes slideIn {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+
+  .menu-section {
+    padding: 10px;
   }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2em;
-    }
-    
-    .menu-section {
-      padding: 15px;
-    }
-  
-    .food-icon {
-      width: 25px;
-    }
-  
-    li {
-      font-size: 1.1em;
-    }
-  
-    .character {
-      width: 60px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 1.8em;
-    }
-  
-    li {
-      font-size: 1em;
-    }
-  
-    .character {
-      width: 50px;
-    }
-  
-    .menu-section {
-      padding: 10px;
-    }
-  }
-  
+}
