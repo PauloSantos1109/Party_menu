@@ -38,7 +38,14 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border: 5px solid #ffccbc;
   position: relative;
-  animation: slideIn 1s ease-in-out;
+  opacity: 0; /* Inicialmente invisível */
+  transform: translateY(20px); /* Para animação de rolagem */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.menu-section.visible {
+  opacity: 1; /* Visível quando ativado */
+  transform: translateY(0); /* Para animação de rolagem */
 }
 
 h2 {
@@ -58,6 +65,12 @@ li {
   margin: 10px 0;
   display: flex;
   align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+li:active {
+  background-color: rgba(255, 200, 200, 0.5); /* Cor de fundo ao tocar */
+  transform: scale(0.98); /* Leve redução de tamanho */
 }
 
 .food-icon {
